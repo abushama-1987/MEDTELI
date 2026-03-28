@@ -69,8 +69,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-
 .pd{width:6px;height:6px;border-radius:3px;background:var(--emerald);animation:pu 1.5s ease-in-out infinite}
 @keyframes pu{0%,100%{opacity:1}50%{opacity:0.4}}
 .doc-btns{display:flex;gap:6px;margin-top:8px}
-.doc-chat-btn{flex:1;background:rgba(14,165,233,0.1);border:none;border-radius:8px;padding:7px;font-size:12px;font-weight:700;color:var(--sky);cursor:pointer;font-family:'DM Sans',sans-serif}
-.doc-call-btn{flex:1;background:rgba(16,185,129,0.1);border:none;border-radius:8px;padding:7px;font-size:12px;font-weight:700;color:var(--emerald);cursor:pointer;font-family:'DM Sans',sans-serif}
+.doc-chat-btn{flex:1;background:rgba(37,211,102,0.12);border:none;border-radius:8px;padding:7px;font-size:12px;font-weight:700;color:#25D366;cursor:pointer;font-family:'DM Sans',sans-serif}
+.doc-call-btn{flex:1;background:rgba(37,211,102,0.08);border:none;border-radius:8px;padding:7px;font-size:12px;font-weight:700;color:#128C7E;cursor:pointer;font-family:'DM Sans',sans-serif}
 .ac{background:var(--surface);border-radius:16px;padding:14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 .as2{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600}
 .ss2{background:rgba(14,165,233,0.1);color:var(--sky)}
@@ -265,33 +265,33 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-
         </div>
       </div>
       <div class="sh"><span class="sl" style="margin:0">AVAILABLE NOW</span><button class="sa" onclick="switchTab('doctors',document.querySelectorAll('.ntab')[1])">See all →</button></div>
-      <div class="dc"><div class="da" style="background:rgba(14,165,233,0.15);color:var(--sky)">JS</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. James Smith</div><div style="font-size:12px;color:#64748b;margin-top:2px">Cardiologist</div><div class="doc-btns"><button class="doc-chat-btn" onclick="openChat('Dr. James Smith','JS','sky')">💬 Chat</button><button class="doc-call-btn" onclick="startCall('Dr. James Smith','JS','sky')">📹 Video Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~5m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.9</div></div></div>
-      <div class="dc"><div class="da" style="background:rgba(139,92,246,0.15);color:var(--violet)">AP</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Aisha Patel</div><div style="font-size:12px;color:#64748b;margin-top:2px">General Physician</div><div class="doc-btns"><button class="doc-chat-btn" onclick="openChat('Dr. Aisha Patel','AP','violet')">💬 Chat</button><button class="doc-call-btn" onclick="startCall('Dr. Aisha Patel','AP','violet')">📹 Video Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~12m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.8</div></div></div>
+      <div class="dc"><div class="da" style="background:rgba(14,165,233,0.15);color:var(--sky)">JS</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. James Smith</div><div style="font-size:12px;color:#64748b;margin-top:2px">Cardiologist</div><div class="doc-btns"><button class="doc-chat-btn" onclick="waChat('919876543210','Dr. James Smith')">💬 WhatsApp</button><button class="doc-call-btn" onclick="waCall('919876543210')">📞 WhatsApp Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~5m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.9</div></div></div>
+      <div class="dc"><div class="da" style="background:rgba(139,92,246,0.15);color:var(--violet)">AP</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Aisha Patel</div><div style="font-size:12px;color:#64748b;margin-top:2px">General Physician</div><div class="doc-btns"><button class="doc-chat-btn" onclick="waChat('919876543211','Dr. Aisha Patel')">💬 WhatsApp</button><button class="doc-call-btn" onclick="waCall('919876543211')">📞 WhatsApp Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~12m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.8</div></div></div>
     </div>
 
     <!-- DOCTORS TAB -->
     <div class="tc" id="tab-doctors">
       <div class="sl">ALL DOCTORS</div>
-      <div class="dc"><div class="da" style="background:rgba(14,165,233,0.15);color:var(--sky)">JS</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. James Smith</div><div style="font-size:12px;color:#64748b;margin-top:2px">Cardiologist</div><div class="doc-btns"><button class="doc-chat-btn" onclick="openChat('Dr. James Smith','JS','sky')">💬 Chat</button><button class="doc-call-btn" onclick="startCall('Dr. James Smith','JS','sky')">📹 Video Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~5m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.9</div></div></div>
-      <div class="dc"><div class="da" style="background:rgba(139,92,246,0.15);color:var(--violet)">AP</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Aisha Patel</div><div style="font-size:12px;color:#64748b;margin-top:2px">General Physician</div><div class="doc-btns"><button class="doc-chat-btn" onclick="openChat('Dr. Aisha Patel','AP','violet')">💬 Chat</button><button class="doc-call-btn" onclick="startCall('Dr. Aisha Patel','AP','violet')">📹 Video Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~12m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.8</div></div></div>
-      <div class="dc"><div class="da" style="background:rgba(16,185,129,0.15);color:var(--emerald)">RK</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Ravi Kumar</div><div style="font-size:12px;color:#64748b;margin-top:2px">Dermatologist</div><div class="doc-btns"><button class="doc-chat-btn" onclick="openChat('Dr. Ravi Kumar','RK','emerald')">💬 Chat</button><button class="doc-call-btn" onclick="startCall('Dr. Ravi Kumar','RK','emerald')">📹 Video Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~8m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.7</div></div></div>
-      <div class="dc"><div class="da" style="background:rgba(245,158,11,0.15);color:var(--amber)">ML</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Maria Lopez</div><div style="font-size:12px;color:#64748b;margin-top:2px">Pediatrician</div><div class="doc-btns"><button class="doc-chat-btn" onclick="openChat('Dr. Maria Lopez','ML','amber')">💬 Chat</button><button class="doc-call-btn" onclick="startCall('Dr. Maria Lopez','ML','amber')">📹 Video Call</button></div></div><div style="text-align:right"><div style="font-size:12px;color:var(--muted);margin-bottom:4px;font-size:11px;color:rgba(148,163,184,1)">Unavailable</div><div style="font-size:12px;color:var(--muted)">★ 4.9</div></div></div>
+      <div class="dc"><div class="da" style="background:rgba(14,165,233,0.15);color:var(--sky)">JS</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. James Smith</div><div style="font-size:12px;color:#64748b;margin-top:2px">Cardiologist</div><div class="doc-btns"><button class="doc-chat-btn" onclick="waChat('919876543210','Dr. James Smith')">💬 WhatsApp</button><button class="doc-call-btn" onclick="waCall('919876543210')">📞 WhatsApp Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~5m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.9</div></div></div>
+      <div class="dc"><div class="da" style="background:rgba(139,92,246,0.15);color:var(--violet)">AP</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Aisha Patel</div><div style="font-size:12px;color:#64748b;margin-top:2px">General Physician</div><div class="doc-btns"><button class="doc-chat-btn" onclick="waChat('919876543211','Dr. Aisha Patel')">💬 WhatsApp</button><button class="doc-call-btn" onclick="waCall('919876543211')">📞 WhatsApp Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~12m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.8</div></div></div>
+      <div class="dc"><div class="da" style="background:rgba(16,185,129,0.15);color:var(--emerald)">RK</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Ravi Kumar</div><div style="font-size:12px;color:#64748b;margin-top:2px">Dermatologist</div><div class="doc-btns"><button class="doc-chat-btn" onclick="waChat('919876543212','Dr. Ravi Kumar')">💬 WhatsApp</button><button class="doc-call-btn" onclick="waCall('919876543212')">📞 WhatsApp Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~8m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.7</div></div></div>
+      <div class="dc"><div class="da" style="background:rgba(245,158,11,0.15);color:var(--amber)">ML</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Maria Lopez</div><div style="font-size:12px;color:#64748b;margin-top:2px">Pediatrician</div><div class="doc-btns"><button class="doc-chat-btn" onclick="waChat('919876543213','Dr. Maria Lopez')">💬 WhatsApp</button><button class="doc-call-btn" onclick="waCall('919876543213')">📞 WhatsApp Call</button></div></div><div style="text-align:right"><div style="font-size:12px;color:var(--muted);margin-bottom:4px;font-size:11px;color:rgba(148,163,184,1)">Unavailable</div><div style="font-size:12px;color:var(--muted)">★ 4.9</div></div></div>
     </div>
 
     <!-- CHAT LIST TAB -->
     <div class="tc" id="tab-chat">
       <div class="sl">MESSAGES</div>
-      <div class="cli" onclick="openChat('Dr. James Smith','JS','sky')">
+      <div class="cli" onclick="waChat('919876543210','Dr. James Smith')">
         <div class="da" style="background:rgba(14,165,233,0.15);color:var(--sky);width:46px;height:46px;border-radius:23px;flex-shrink:0">JS</div>
         <div class="cli-info"><div class="cli-name">Dr. James Smith</div><div class="cli-last">Hello! How are you feeling today?</div></div>
         <div class="cli-meta"><div class="cli-time">10:32 AM</div><div class="cli-badge">2</div></div>
       </div>
-      <div class="cli" onclick="openChat('Dr. Aisha Patel','AP','violet')">
+      <div class="cli" onclick="waChat('919876543211','Dr. Aisha Patel')">
         <div class="da" style="background:rgba(139,92,246,0.15);color:var(--violet);width:46px;height:46px;border-radius:23px;flex-shrink:0">AP</div>
         <div class="cli-info"><div class="cli-name">Dr. Aisha Patel</div><div class="cli-last">Your prescription has been renewed.</div></div>
         <div class="cli-meta"><div class="cli-time">Yesterday</div></div>
       </div>
-      <div class="cli" onclick="openChat('Dr. Ravi Kumar','RK','emerald')">
+      <div class="cli" onclick="waChat('919876543212','Dr. Ravi Kumar')">
         <div class="da" style="background:rgba(16,185,129,0.15);color:var(--emerald);width:46px;height:46px;border-radius:23px;flex-shrink:0">RK</div>
         <div class="cli-info"><div class="cli-name">Dr. Ravi Kumar</div><div class="cli-last">Please apply the cream twice daily.</div></div>
         <div class="cli-meta"><div class="cli-time">Mon</div></div>
@@ -421,6 +421,15 @@ function markRead(r){const d=r.querySelector('.ud');if(d){d.remove();r.style.opa
 function toggleVF(){vfo=!vfo;document.getElementById('vfm').style.display=vfo?'block':'none';document.getElementById('logbtn').textContent=vfo?'Cancel':'+ Log'}
 function saveVitals(){const bp=document.getElementById('ibp').value,hr=document.getElementById('ihr').value,sp=document.getElementById('ispo').value;if(!bp||!hr){alert('Enter at least BP and HR');return}document.getElementById('vbp').textContent=bp;document.getElementById('vhr').textContent=hr+' bpm';document.getElementById('vspo').textContent=sp?sp+'%':'98%';document.getElementById('vfm').style.display='none';document.getElementById('logbtn').textContent='+ Log';vfo=false;['ibp','ihr','ispo','itmp'].forEach(id=>document.getElementById(id).value='');alert('✅ Vitals saved!')}
 function switchTab(n,b){document.querySelectorAll('.tc').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active');b.classList.add('active');if(no)toggleNotifs()}
+
+// ── WHATSAPP ──
+function waChat(number, name){
+  const msg=encodeURIComponent('Hello Dr. ' + name.replace('Dr. ','') + ', I am contacting you through MEDTELI app.');
+  window.open('https://wa.me/' + number + '?text=' + msg, '_blank');
+}
+function waCall(number){
+  window.open('https://wa.me/' + number, '_blank');
+}
 
 // ── CHAT ──
 function openChat(name,initials,color){
