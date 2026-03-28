@@ -9,53 +9,47 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{--navy:#0f172a;--sky:#0ea5e9;--violet:#8b5cf6;--emerald:#10b981;--amber:#f59e0b;--red:#ef4444;--slate:#475569;--muted:#94a3b8;--bg:#f0f4f8;--surface:#fff;--border:#e2e8f0}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-width:430px;margin:0 auto}
-.screen{display:none;min-height:100vh}
-.screen.active{display:block}
-
-/* LOGIN */
+.screen{display:none;min-height:100vh}.screen.active{display:block}
 .login-wrap{min-height:100vh;background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 24px}
 .login-logo{font-size:32px;font-weight:700;color:#fff;letter-spacing:2px;margin-bottom:6px}
 .login-sub{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:40px}
 .login-card{background:#fff;border-radius:20px;padding:28px 24px;width:100%;max-width:340px}
 .login-title{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px}
 .login-desc{font-size:13px;color:var(--muted);margin-bottom:24px}
-.login-label{font-size:12px;font-weight:600;color:var(--slate);margin-bottom:6px;display:block}
-.login-input{width:100%;border:1px solid var(--border);border-radius:10px;padding:11px 14px;font-size:14px;color:var(--navy);font-family:'DM Sans',sans-serif;outline:none;margin-bottom:14px}
-.login-input:focus{border-color:var(--sky)}
-.login-btn{width:100%;background:var(--navy);border:none;border-radius:12px;padding:13px;color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:4px}
-.login-err{color:var(--red);font-size:12px;text-align:center;margin-top:10px;display:none}
-.login-switch{text-align:center;margin-top:16px;font-size:13px;color:var(--muted)}
-.login-switch a{color:var(--sky);cursor:pointer;font-weight:600}
-.hint-box{background:#f0f4f8;border-radius:10px;padding:12px;margin-top:16px;font-size:12px;color:var(--slate)}
-.hint-box b{color:var(--navy)}
-
-/* PATIENT */
-.header{background:var(--navy);padding:20px 20px 0;position:sticky;top:0;z-index:100}
-.header-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
-.greeting{font-size:11px;color:rgba(255,255,255,0.5);font-weight:600;letter-spacing:1px;margin-bottom:4px}
-.username{font-size:24px;color:#fff;font-weight:600}
-.header-right{display:flex;gap:8px}
-.icon-btn{width:44px;height:44px;border-radius:22px;background:rgba(255,255,255,0.1);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;position:relative;color:#fff}
+.ll{font-size:12px;font-weight:600;color:var(--slate);margin-bottom:6px;display:block}
+.li{width:100%;border:1px solid var(--border);border-radius:10px;padding:11px 14px;font-size:14px;color:var(--navy);font-family:'DM Sans',sans-serif;outline:none;margin-bottom:14px}
+.li:focus{border-color:var(--sky)}
+.lb{width:100%;background:var(--navy);border:none;border-radius:12px;padding:13px;color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:4px}
+.le{color:var(--red);font-size:12px;text-align:center;margin-top:10px;display:none}
+.lsw{text-align:center;margin-top:16px;font-size:13px;color:var(--muted)}
+.lsw a{color:var(--sky);cursor:pointer;font-weight:600}
+.hint{background:#f0f4f8;border-radius:10px;padding:12px;margin-top:16px;font-size:12px;color:var(--slate)}
+.hint b{color:var(--navy)}
+.hdr{background:var(--navy);padding:20px 20px 0;position:sticky;top:0;z-index:100}
+.hdr-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
+.gr{font-size:11px;color:rgba(255,255,255,0.5);font-weight:600;letter-spacing:1px;margin-bottom:4px}
+.un{font-size:24px;color:#fff;font-weight:600}
+.hr2{display:flex;gap:8px}
+.ib{width:44px;height:44px;border-radius:22px;background:rgba(255,255,255,0.1);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;position:relative;color:#fff}
 .badge{position:absolute;top:-2px;right:-2px;width:18px;height:18px;border-radius:9px;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff}
-.health-card{margin:0 16px 16px;background:rgba(255,255,255,0.08);border-radius:16px;padding:16px;border:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between}
-.health-label{font-size:11px;color:rgba(255,255,255,0.5);font-weight:600;letter-spacing:1px;margin-bottom:4px}
-.health-score{font-size:42px;color:#fff;font-weight:700;line-height:1}
-.health-max{font-size:13px;color:rgba(255,255,255,0.5)}
-.health-trend{font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px}
-.vitals-h{font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;margin-bottom:6px;text-align:right}
+.hc{margin:0 16px 16px;background:rgba(255,255,255,0.08);border-radius:16px;padding:16px;border:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between}
+.hl{font-size:11px;color:rgba(255,255,255,0.5);font-weight:600;letter-spacing:1px;margin-bottom:4px}
+.hs{font-size:42px;color:#fff;font-weight:700;line-height:1}
+.hm{font-size:13px;color:rgba(255,255,255,0.5)}
+.ht{font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px}
+.vh{font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;margin-bottom:6px;text-align:right}
 .vrow{display:flex;gap:10px;justify-content:flex-end;margin-bottom:3px}
-.vkey{font-size:12px;color:rgba(255,255,255,0.45)}
-.vval{font-size:12px;color:#fff;font-weight:600}
-.nav-tabs{display:flex;border-bottom:1px solid rgba(255,255,255,0.1)}
-.nav-tab{flex:1;padding:12px 8px;background:none;border:none;color:rgba(255,255,255,0.45);font-size:12px;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;font-family:'DM Sans',sans-serif;transition:all .2s}
-.nav-tab.active{color:#fff;border-bottom-color:var(--sky)}
+.vk{font-size:12px;color:rgba(255,255,255,0.45)}
+.vv{font-size:12px;color:#fff;font-weight:600}
+.ntabs{display:flex;border-bottom:1px solid rgba(255,255,255,0.1);overflow-x:auto}
+.ntab{flex:1;padding:12px 6px;background:none;border:none;color:rgba(255,255,255,0.45);font-size:11px;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;min-width:50px}
+.ntab.active{color:#fff;border-bottom-color:var(--sky)}
 .body{padding:16px}
 .sl{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:1px;margin-bottom:12px}
 .sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;margin-top:8px}
-.see-all{font-size:13px;color:var(--sky);font-weight:600;background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif}
+.sa{font-size:13px;color:var(--sky);font-weight:600;background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif}
 .np{background:var(--surface);margin:0 16px;border-radius:16px;padding:16px;box-shadow:0 8px 32px rgba(0,0,0,0.12);animation:sd .22s ease}
 @keyframes sd{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
-.nh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
 .nr{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;align-items:flex-start;cursor:pointer}
 .nr:last-child{border-bottom:none}
 .ud{width:8px;height:8px;border-radius:4px;background:var(--sky);margin-top:6px;flex-shrink:0}
@@ -64,29 +58,81 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-
 .qc:active{transform:scale(0.97)}
 .qi{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;font-size:20px}
 .card{background:var(--surface);border-radius:16px;padding:14px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
-.log-btn{background:rgba(14,165,233,0.1);border:none;border-radius:10px;padding:6px 12px;font-size:12px;font-weight:700;color:var(--sky);cursor:pointer;font-family:'DM Sans',sans-serif}
+.lb2{background:rgba(14,165,233,0.1);border:none;border-radius:10px;padding:6px 12px;font-size:12px;font-weight:700;color:var(--sky);cursor:pointer;font-family:'DM Sans',sans-serif}
 .vf{margin-top:14px;animation:sd .22s ease}
 .vg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
 .vi{background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:9px;font-size:13px;color:var(--navy);width:100%;font-family:'DM Sans',sans-serif;outline:none}
 .svb{background:var(--navy);border:none;border-radius:12px;padding:12px;width:100%;color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif}
-.dc{background:var(--surface);border-radius:16px;padding:14px;display:flex;align-items:center;gap:14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.dc{background:var(--surface);border-radius:16px;padding:14px;display:flex;align-items:center;gap:12px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 .da{width:46px;height:46px;border-radius:23px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0}
 .wb{display:inline-flex;align-items:center;gap:4px;background:rgba(16,185,129,0.1);padding:3px 8px;border-radius:20px;margin-bottom:4px}
 .pd{width:6px;height:6px;border-radius:3px;background:var(--emerald);animation:pu 1.5s ease-in-out infinite}
 @keyframes pu{0%,100%{opacity:1}50%{opacity:0.4}}
+.doc-btns{display:flex;gap:6px;margin-top:8px}
+.doc-chat-btn{flex:1;background:rgba(14,165,233,0.1);border:none;border-radius:8px;padding:7px;font-size:12px;font-weight:700;color:var(--sky);cursor:pointer;font-family:'DM Sans',sans-serif}
+.doc-call-btn{flex:1;background:rgba(16,185,129,0.1);border:none;border-radius:8px;padding:7px;font-size:12px;font-weight:700;color:var(--emerald);cursor:pointer;font-family:'DM Sans',sans-serif}
 .ac{background:var(--surface);border-radius:16px;padding:14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 .as2{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600}
-.ss{background:rgba(14,165,233,0.1);color:var(--sky)}
-.sc{background:rgba(16,185,129,0.1);color:var(--emerald)}
+.ss2{background:rgba(14,165,233,0.1);color:var(--sky)}
+.sc2{background:rgba(16,185,129,0.1);color:var(--emerald)}
 .rxc{background:var(--surface);border-radius:16px;padding:14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06);display:flex;gap:12px}
 .rxi{width:40px;height:40px;border-radius:12px;background:rgba(139,92,246,0.1);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
 .rxb{display:inline-block;margin-top:6px;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600}
 .rxa{background:rgba(16,185,129,0.1);color:var(--emerald)}
-.tc{display:none}
-.tc.active{display:block}
+.tc{display:none}.tc.active{display:block}
+
+/* CHAT LIST */
+.cli{background:var(--surface);border-radius:16px;padding:14px;display:flex;align-items:center;gap:12px;margin-bottom:10px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.06);transition:transform .15s}
+.cli:active{transform:scale(0.98)}
+.cli-info{flex:1;min-width:0}
+.cli-name{font-size:14px;font-weight:600;color:var(--navy)}
+.cli-last{font-size:12px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cli-meta{text-align:right;flex-shrink:0}
+.cli-time{font-size:11px;color:var(--muted);margin-bottom:4px}
+.cli-badge{background:var(--sky);color:#fff;font-size:11px;font-weight:700;width:20px;height:20px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-left:auto}
+
+/* CHAT SCREEN */
+.chat-scr{position:fixed;inset:0;background:var(--bg);z-index:200;display:none;flex-direction:column;max-width:430px;margin:0 auto}
+.chat-scr.open{display:flex}
+.chat-hdr{background:var(--navy);padding:14px 16px;display:flex;align-items:center;gap:12px}
+.chat-back{background:none;border:none;color:#fff;font-size:24px;cursor:pointer;line-height:1;padding:0}
+.chat-av{width:38px;height:38px;border-radius:19px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.chat-info{flex:1}
+.chat-name{font-size:15px;font-weight:600;color:#fff}
+.chat-status{font-size:11px;color:rgba(255,255,255,0.5);margin-top:1px}
+.chat-hdr-btns{display:flex;gap:8px}
+.chb{width:36px;height:36px;border-radius:18px;background:rgba(255,255,255,0.12);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:17px}
+.chat-msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:78%;display:flex;flex-direction:column}
+.msg.mine{align-self:flex-end;align-items:flex-end}
+.msg.theirs{align-self:flex-start;align-items:flex-start}
+.mb{padding:10px 14px;border-radius:18px;font-size:14px;line-height:1.5}
+.msg.mine .mb{background:var(--sky);color:#fff;border-bottom-right-radius:4px}
+.msg.theirs .mb{background:#fff;color:var(--navy);border-bottom-left-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+.mt2{font-size:10px;color:var(--muted);margin-top:3px}
+.chat-inp-area{background:#fff;padding:12px 16px;display:flex;align-items:center;gap:10px;border-top:1px solid var(--border)}
+.chat-inp{flex:1;border:1px solid var(--border);border-radius:22px;padding:10px 16px;font-size:14px;color:var(--navy);font-family:'DM Sans',sans-serif;outline:none;background:#f8fafc}
+.chat-inp:focus{border-color:var(--sky)}
+.chat-send{width:42px;height:42px;border-radius:21px;background:var(--sky);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+
+/* VIDEO CALL */
+.vc-scr{position:fixed;inset:0;background:#0a0a0a;z-index:300;display:none;flex-direction:column;max-width:430px;margin:0 auto}
+.vc-scr.open{display:flex}
+.vc-remote{flex:1;background:#1a1a2e;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.vc-remote-av{width:110px;height:110px;border-radius:55px;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:700}
+.vc-name{position:absolute;bottom:24px;left:0;right:0;text-align:center;color:#fff;font-size:18px;font-weight:600}
+.vc-calling{position:absolute;top:24px;left:0;right:0;text-align:center;color:rgba(255,255,255,0.6);font-size:13px}
+.vc-timer{position:absolute;top:48px;left:0;right:0;text-align:center;color:var(--emerald);font-size:14px;font-weight:600;display:none}
+.vc-local{position:absolute;top:16px;right:16px;width:82px;height:112px;background:#2a2a3e;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:30px;border:2px solid rgba(255,255,255,0.15)}
+.vc-ctrls{background:#111;padding:24px 20px 40px;display:flex;justify-content:center;align-items:center;gap:18px}
+.vc-btn{width:54px;height:54px;border-radius:27px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:22px;transition:transform .1s}
+.vc-btn:active{transform:scale(0.92)}
+.vc-btn.end{background:var(--red);width:68px;height:68px;border-radius:34px}
+.vc-btn.dark{background:#2a2a2a}
+@keyframes ring{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.ringing{animation:ring 1s ease-in-out infinite}
 
 /* ADMIN */
-.admin-wrap{min-height:100vh;background:#f8fafc}
 .admin-hdr{background:var(--navy);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
 .admin-logo{font-size:18px;font-weight:700;color:#fff;letter-spacing:1px}
 .admin-logo span{color:var(--sky)}
@@ -95,8 +141,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-
 .anb{padding:14px 14px;background:none;border:none;border-bottom:2px solid transparent;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;transition:all .2s}
 .anb.active{color:var(--navy);border-bottom-color:var(--sky)}
 .ab{padding:16px}
-.atab{display:none}
-.atab.active{display:block}
+.atab{display:none}.atab.active{display:block}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
 .stc{background:#fff;border-radius:14px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 .stn{font-size:32px;font-weight:700;color:var(--navy)}
@@ -104,22 +149,20 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-
 .sti{font-size:24px;margin-bottom:8px}
 .acard{background:#fff;border-radius:14px;padding:14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 .acr{display:flex;justify-content:space-between;align-items:center}
-.an{font-size:14px;font-weight:600;color:var(--navy)}
+.an3{font-size:14px;font-weight:600;color:var(--navy)}
 .asu{font-size:12px;color:var(--muted);margin-top:2px}
 .aacts{display:flex;gap:8px}
 .be{background:rgba(14,165,233,0.1);border:none;border-radius:8px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--sky);cursor:pointer;font-family:'DM Sans',sans-serif}
 .bd{background:rgba(239,68,68,0.1);border:none;border-radius:8px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--red);cursor:pointer;font-family:'DM Sans',sans-serif}
 .badd{background:var(--navy);border:none;border-radius:10px;padding:10px 18px;color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;margin-bottom:14px}
 .adot{width:8px;height:8px;border-radius:4px;display:inline-block;margin-right:4px}
-.ay{background:var(--emerald)}.an2{background:var(--muted)}
+.ay{background:var(--emerald)}.an2x{background:var(--muted)}
 .ast{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px}
-
-/* MODAL */
-.mover{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;display:flex;align-items:flex-end;justify-content:center;animation:fi .2s}
+.mover{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:400;display:flex;align-items:flex-end;justify-content:center;animation:fi .2s}
 @keyframes fi{from{opacity:0}to{opacity:1}}
 .modal{background:#fff;border-radius:20px 20px 0 0;padding:24px;width:100%;max-width:430px;animation:su .25s ease}
 @keyframes su{from{transform:translateY(40px)}to{transform:none}}
-.mt{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:16px}
+.mtx{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:16px}
 .mi{width:100%;border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:14px;color:var(--navy);font-family:'DM Sans',sans-serif;outline:none;margin-bottom:10px}
 .mi:focus{border-color:var(--sky)}
 .mbs{display:flex;gap:10px;margin-top:4px}
@@ -137,14 +180,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-
     <div class="login-card">
       <div class="login-title">Welcome back</div>
       <div class="login-desc">Sign in to your account</div>
-      <label class="login-label">Username</label>
-      <input class="login-input" id="lu" placeholder="patient" autocomplete="off">
-      <label class="login-label">Password</label>
-      <input class="login-input" id="lp" type="password" placeholder="patient123" onkeydown="if(event.key==='Enter')doLogin()">
-      <button class="login-btn" onclick="doLogin()">Sign In →</button>
-      <div class="login-err" id="lerr">❌ Invalid username or password</div>
-      <div class="login-switch">Admin? <a onclick="ss('s-admin-login')">Login here</a></div>
-      <div class="hint-box">💡 Try: <b>patient</b> / <b>patient123</b></div>
+      <label class="ll">Username</label>
+      <input class="li" id="lu" placeholder="patient" autocomplete="off">
+      <label class="ll">Password</label>
+      <input class="li" id="lp" type="password" placeholder="patient123" onkeydown="if(event.key==='Enter')doLogin()">
+      <button class="lb" onclick="doLogin()">Sign In →</button>
+      <div class="le" id="lerr">❌ Invalid username or password</div>
+      <div class="lsw">Admin? <a onclick="ss('s-admin-login')">Login here</a></div>
+      <div class="hint">💡 Try: <b>patient</b> / <b>patient123</b></div>
     </div>
   </div>
 </div>
@@ -157,43 +200,44 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-
     <div class="login-card">
       <div class="login-title">Admin Login</div>
       <div class="login-desc">Enter your admin credentials</div>
-      <label class="login-label">Username</label>
-      <input class="login-input" id="au" placeholder="admin" autocomplete="off">
-      <label class="login-label">Password</label>
-      <input class="login-input" id="ap" type="password" placeholder="admin123" onkeydown="if(event.key==='Enter')doAdminLogin()">
-      <button class="login-btn" onclick="doAdminLogin()">Admin Sign In →</button>
-      <div class="login-err" id="aerr">❌ Invalid admin credentials</div>
-      <div class="login-switch">Patient? <a onclick="ss('s-login')">Login here</a></div>
-      <div class="hint-box">💡 Username: <b>admin</b> · Password: <b>admin123</b></div>
+      <label class="ll">Username</label>
+      <input class="li" id="au" placeholder="admin" autocomplete="off">
+      <label class="ll">Password</label>
+      <input class="li" id="ap" type="password" placeholder="admin123" onkeydown="if(event.key==='Enter')doAdminLogin()">
+      <button class="lb" onclick="doAdminLogin()">Admin Sign In →</button>
+      <div class="le" id="aerr">❌ Invalid admin credentials</div>
+      <div class="lsw">Patient? <a onclick="ss('s-login')">Login here</a></div>
+      <div class="hint">💡 Username: <b>admin</b> · Password: <b>admin123</b></div>
     </div>
   </div>
 </div>
 
 <!-- PATIENT APP -->
 <div class="screen" id="s-patient">
-  <div class="header">
-    <div class="header-top">
-      <div><div class="greeting">GOOD MORNING</div><div class="username" id="pname">Patient 👋</div></div>
-      <div class="header-right">
-        <button class="icon-btn" onclick="toggleNotifs()">🔔<div class="badge" id="badge">3</div></button>
-        <button class="icon-btn" onclick="doLogout()">🚪</button>
+  <div class="hdr">
+    <div class="hdr-top">
+      <div><div class="gr">GOOD MORNING</div><div class="un" id="pname">Patient 👋</div></div>
+      <div class="hr2">
+        <button class="ib" onclick="toggleNotifs()">🔔<div class="badge" id="badge">3</div></button>
+        <button class="ib" onclick="doLogout()">🚪</button>
       </div>
     </div>
-    <div class="health-card">
-      <div><div class="health-label">HEALTH SCORE</div><div style="display:flex;align-items:flex-end;gap:6px;margin-bottom:4px"><span class="health-score">87</span><span class="health-max">/100</span></div><div class="health-trend">+3 from last month</div></div>
-      <div><div class="vitals-h">LATEST VITALS</div><div class="vrow"><span class="vkey">BP</span><span class="vval" id="vbp">120/80</span></div><div class="vrow"><span class="vkey">HR</span><span class="vval" id="vhr">72 bpm</span></div><div class="vrow"><span class="vkey">SpO₂</span><span class="vval" id="vspo">98%</span></div></div>
+    <div class="hc">
+      <div><div class="hl">HEALTH SCORE</div><div style="display:flex;align-items:flex-end;gap:6px;margin-bottom:4px"><span class="hs">87</span><span class="hm">/100</span></div><div class="ht">+3 from last month</div></div>
+      <div><div class="vh">LATEST VITALS</div><div class="vrow"><span class="vk">BP</span><span class="vv" id="vbp">120/80</span></div><div class="vrow"><span class="vk">HR</span><span class="vv" id="vhr">72 bpm</span></div><div class="vrow"><span class="vk">SpO₂</span><span class="vv" id="vspo">98%</span></div></div>
     </div>
-    <div class="nav-tabs">
-      <button class="nav-tab active" onclick="switchTab('home',this)">HOME</button>
-      <button class="nav-tab" onclick="switchTab('doctors',this)">DOCTORS</button>
-      <button class="nav-tab" onclick="switchTab('appts',this)">APPTS</button>
-      <button class="nav-tab" onclick="switchTab('rx',this)">Rx</button>
+    <div class="ntabs">
+      <button class="ntab active" onclick="switchTab('home',this)">HOME</button>
+      <button class="ntab" onclick="switchTab('doctors',this)">DOCTORS</button>
+      <button class="ntab" onclick="switchTab('chat',this)">💬 CHAT</button>
+      <button class="ntab" onclick="switchTab('appts',this)">APPTS</button>
+      <button class="ntab" onclick="switchTab('rx',this)">Rx</button>
     </div>
   </div>
 
   <div id="npw" style="display:none">
     <div class="np">
-      <div class="nh"><span style="font-size:14px;font-weight:700;color:var(--navy)">Notifications</span><button style="background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer" onclick="toggleNotifs()">×</button></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><span style="font-size:14px;font-weight:700;color:var(--navy)">Notifications</span><button style="background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer" onclick="toggleNotifs()">×</button></div>
       <div class="nr" onclick="markRead(this)"><span style="font-size:20px">📅</span><div style="flex:1"><div style="font-size:13px;font-weight:600;color:var(--navy)">Appointment Reminder</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Dr. Smith tomorrow at 10:00 AM</div></div><div class="ud"></div></div>
       <div class="nr" onclick="markRead(this)"><span style="font-size:20px">💊</span><div style="flex:1"><div style="font-size:13px;font-weight:600;color:var(--navy)">Medication Reminder</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Take Metformin 500mg with dinner</div></div><div class="ud"></div></div>
       <div class="nr" onclick="markRead(this)"><span style="font-size:20px">🔔</span><div style="flex:1"><div style="font-size:13px;font-weight:600;color:var(--navy)">Lab Results Ready</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Your blood test results are available</div></div><div class="ud"></div></div>
@@ -201,40 +245,67 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-
   </div>
 
   <div class="body">
+    <!-- HOME TAB -->
     <div class="tc active" id="tab-home">
       <div class="sl">QUICK ACTIONS</div>
       <div class="qg">
-        <button class="qc" onclick="switchTab('doctors',document.querySelectorAll('.nav-tab')[1])"><div class="qi" style="background:rgba(14,165,233,0.1)">🩺</div><div style="font-size:14px;font-weight:600;color:#1e293b;margin-bottom:2px">See a Doctor</div><div style="font-size:12px;color:var(--muted)">Doctors online now</div></button>
-        <button class="qc"><div class="qi" style="background:rgba(139,92,246,0.1)">📋</div><div style="font-size:14px;font-weight:600;color:#1e293b;margin-bottom:2px">My Records</div><div style="font-size:12px;color:var(--muted)">View health data</div></button>
-        <button class="qc" onclick="switchTab('rx',document.querySelectorAll('.nav-tab')[3])"><div class="qi" style="background:rgba(16,185,129,0.1)">💊</div><div style="font-size:14px;font-weight:600;color:#1e293b;margin-bottom:2px">Prescriptions</div><div style="font-size:12px;color:var(--muted)">2 active</div></button>
-        <button class="qc" onclick="switchTab('appts',document.querySelectorAll('.nav-tab')[2])"><div class="qi" style="background:rgba(245,158,11,0.1)">📅</div><div style="font-size:14px;font-weight:600;color:#1e293b;margin-bottom:2px">Appointments</div><div style="font-size:12px;color:var(--muted)">1 upcoming</div></button>
+        <button class="qc" onclick="switchTab('doctors',document.querySelectorAll('.ntab')[1])"><div class="qi" style="background:rgba(14,165,233,0.1)">🩺</div><div style="font-size:14px;font-weight:600;color:#1e293b;margin-bottom:2px">See a Doctor</div><div style="font-size:12px;color:var(--muted)">Doctors online now</div></button>
+        <button class="qc" onclick="switchTab('chat',document.querySelectorAll('.ntab')[2])"><div class="qi" style="background:rgba(139,92,246,0.1)">💬</div><div style="font-size:14px;font-weight:600;color:#1e293b;margin-bottom:2px">Chat</div><div style="font-size:12px;color:var(--muted)">Message doctors</div></button>
+        <button class="qc" onclick="switchTab('rx',document.querySelectorAll('.ntab')[4])"><div class="qi" style="background:rgba(16,185,129,0.1)">💊</div><div style="font-size:14px;font-weight:600;color:#1e293b;margin-bottom:2px">Prescriptions</div><div style="font-size:12px;color:var(--muted)">2 active</div></button>
+        <button class="qc" onclick="switchTab('appts',document.querySelectorAll('.ntab')[3])"><div class="qi" style="background:rgba(245,158,11,0.1)">📅</div><div style="font-size:14px;font-weight:600;color:#1e293b;margin-bottom:2px">Appointments</div><div style="font-size:12px;color:var(--muted)">1 upcoming</div></button>
       </div>
       <div class="card">
         <div style="display:flex;justify-content:space-between;align-items:center">
           <div style="display:flex;align-items:center;gap:10px"><span style="font-size:20px">📊</span><div><div style="font-size:14px;font-weight:600;color:var(--navy)">Log Today's Vitals</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Keep your health data current</div></div></div>
-          <button class="log-btn" id="logbtn" onclick="toggleVF()">+ Log</button>
+          <button class="lb2" id="logbtn" onclick="toggleVF()">+ Log</button>
         </div>
         <div id="vfm" style="display:none" class="vf">
           <div class="vg"><div><label style="font-size:11px;color:var(--muted);margin-bottom:4px;font-weight:600;display:block">Blood Pressure</label><input class="vi" placeholder="120/80" id="ibp"></div><div><label style="font-size:11px;color:var(--muted);margin-bottom:4px;font-weight:600;display:block">Heart Rate</label><input class="vi" placeholder="bpm" id="ihr"></div><div><label style="font-size:11px;color:var(--muted);margin-bottom:4px;font-weight:600;display:block">SpO₂</label><input class="vi" placeholder="%" id="ispo"></div><div><label style="font-size:11px;color:var(--muted);margin-bottom:4px;font-weight:600;display:block">Temperature</label><input class="vi" placeholder="°F" id="itmp"></div></div>
           <button class="svb" onclick="saveVitals()">Save Vitals →</button>
         </div>
       </div>
-      <div class="sh"><span class="sl" style="margin:0">AVAILABLE NOW</span><button class="see-all" onclick="switchTab('doctors',document.querySelectorAll('.nav-tab')[1])">See all →</button></div>
-      <div class="dc"><div class="da" style="background:rgba(14,165,233,0.15);color:var(--sky)">JS</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. James Smith</div><div style="font-size:12px;color:#64748b;margin-top:2px">Cardiologist</div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~5m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.9</div></div></div>
-      <div class="dc"><div class="da" style="background:rgba(139,92,246,0.15);color:var(--violet)">AP</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Aisha Patel</div><div style="font-size:12px;color:#64748b;margin-top:2px">General Physician</div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~12m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.8</div></div></div>
+      <div class="sh"><span class="sl" style="margin:0">AVAILABLE NOW</span><button class="sa" onclick="switchTab('doctors',document.querySelectorAll('.ntab')[1])">See all →</button></div>
+      <div class="dc"><div class="da" style="background:rgba(14,165,233,0.15);color:var(--sky)">JS</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. James Smith</div><div style="font-size:12px;color:#64748b;margin-top:2px">Cardiologist</div><div class="doc-btns"><button class="doc-chat-btn" onclick="openChat('Dr. James Smith','JS','sky')">💬 Chat</button><button class="doc-call-btn" onclick="startCall('Dr. James Smith','JS','sky')">📹 Video Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~5m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.9</div></div></div>
+      <div class="dc"><div class="da" style="background:rgba(139,92,246,0.15);color:var(--violet)">AP</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Aisha Patel</div><div style="font-size:12px;color:#64748b;margin-top:2px">General Physician</div><div class="doc-btns"><button class="doc-chat-btn" onclick="openChat('Dr. Aisha Patel','AP','violet')">💬 Chat</button><button class="doc-call-btn" onclick="startCall('Dr. Aisha Patel','AP','violet')">📹 Video Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~12m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.8</div></div></div>
     </div>
+
+    <!-- DOCTORS TAB -->
     <div class="tc" id="tab-doctors">
       <div class="sl">ALL DOCTORS</div>
-      <div class="dc"><div class="da" style="background:rgba(14,165,233,0.15);color:var(--sky)">JS</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. James Smith</div><div style="font-size:12px;color:#64748b;margin-top:2px">Cardiologist</div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~5m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.9</div></div></div>
-      <div class="dc"><div class="da" style="background:rgba(139,92,246,0.15);color:var(--violet)">AP</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Aisha Patel</div><div style="font-size:12px;color:#64748b;margin-top:2px">General Physician</div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~12m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.8</div></div></div>
-      <div class="dc"><div class="da" style="background:rgba(16,185,129,0.15);color:var(--emerald)">RK</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Ravi Kumar</div><div style="font-size:12px;color:#64748b;margin-top:2px">Dermatologist</div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~8m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.7</div></div></div>
-      <div class="dc"><div class="da" style="background:rgba(245,158,11,0.15);color:var(--amber)">ML</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Maria Lopez</div><div style="font-size:12px;color:#64748b;margin-top:2px">Pediatrician</div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~20m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.9</div></div></div>
+      <div class="dc"><div class="da" style="background:rgba(14,165,233,0.15);color:var(--sky)">JS</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. James Smith</div><div style="font-size:12px;color:#64748b;margin-top:2px">Cardiologist</div><div class="doc-btns"><button class="doc-chat-btn" onclick="openChat('Dr. James Smith','JS','sky')">💬 Chat</button><button class="doc-call-btn" onclick="startCall('Dr. James Smith','JS','sky')">📹 Video Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~5m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.9</div></div></div>
+      <div class="dc"><div class="da" style="background:rgba(139,92,246,0.15);color:var(--violet)">AP</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Aisha Patel</div><div style="font-size:12px;color:#64748b;margin-top:2px">General Physician</div><div class="doc-btns"><button class="doc-chat-btn" onclick="openChat('Dr. Aisha Patel','AP','violet')">💬 Chat</button><button class="doc-call-btn" onclick="startCall('Dr. Aisha Patel','AP','violet')">📹 Video Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~12m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.8</div></div></div>
+      <div class="dc"><div class="da" style="background:rgba(16,185,129,0.15);color:var(--emerald)">RK</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Ravi Kumar</div><div style="font-size:12px;color:#64748b;margin-top:2px">Dermatologist</div><div class="doc-btns"><button class="doc-chat-btn" onclick="openChat('Dr. Ravi Kumar','RK','emerald')">💬 Chat</button><button class="doc-call-btn" onclick="startCall('Dr. Ravi Kumar','RK','emerald')">📹 Video Call</button></div></div><div style="text-align:right"><div class="wb"><div class="pd"></div><span style="font-size:11px;color:var(--emerald);font-weight:600">~8m</span></div><div style="font-size:12px;color:var(--muted)">★ 4.7</div></div></div>
+      <div class="dc"><div class="da" style="background:rgba(245,158,11,0.15);color:var(--amber)">ML</div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:#1e293b">Dr. Maria Lopez</div><div style="font-size:12px;color:#64748b;margin-top:2px">Pediatrician</div><div class="doc-btns"><button class="doc-chat-btn" onclick="openChat('Dr. Maria Lopez','ML','amber')">💬 Chat</button><button class="doc-call-btn" onclick="startCall('Dr. Maria Lopez','ML','amber')">📹 Video Call</button></div></div><div style="text-align:right"><div style="font-size:12px;color:var(--muted);margin-bottom:4px;font-size:11px;color:rgba(148,163,184,1)">Unavailable</div><div style="font-size:12px;color:var(--muted)">★ 4.9</div></div></div>
     </div>
+
+    <!-- CHAT LIST TAB -->
+    <div class="tc" id="tab-chat">
+      <div class="sl">MESSAGES</div>
+      <div class="cli" onclick="openChat('Dr. James Smith','JS','sky')">
+        <div class="da" style="background:rgba(14,165,233,0.15);color:var(--sky);width:46px;height:46px;border-radius:23px;flex-shrink:0">JS</div>
+        <div class="cli-info"><div class="cli-name">Dr. James Smith</div><div class="cli-last">Hello! How are you feeling today?</div></div>
+        <div class="cli-meta"><div class="cli-time">10:32 AM</div><div class="cli-badge">2</div></div>
+      </div>
+      <div class="cli" onclick="openChat('Dr. Aisha Patel','AP','violet')">
+        <div class="da" style="background:rgba(139,92,246,0.15);color:var(--violet);width:46px;height:46px;border-radius:23px;flex-shrink:0">AP</div>
+        <div class="cli-info"><div class="cli-name">Dr. Aisha Patel</div><div class="cli-last">Your prescription has been renewed.</div></div>
+        <div class="cli-meta"><div class="cli-time">Yesterday</div></div>
+      </div>
+      <div class="cli" onclick="openChat('Dr. Ravi Kumar','RK','emerald')">
+        <div class="da" style="background:rgba(16,185,129,0.15);color:var(--emerald);width:46px;height:46px;border-radius:23px;flex-shrink:0">RK</div>
+        <div class="cli-info"><div class="cli-name">Dr. Ravi Kumar</div><div class="cli-last">Please apply the cream twice daily.</div></div>
+        <div class="cli-meta"><div class="cli-time">Mon</div></div>
+      </div>
+    </div>
+
+    <!-- APPOINTMENTS TAB -->
     <div class="tc" id="tab-appts">
       <div class="sl">MY APPOINTMENTS</div>
-      <div class="ac"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><div style="font-size:14px;font-weight:600;color:var(--navy)">Dr. James Smith</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Cardiologist</div></div><span class="as2 ss">Scheduled</span></div><div style="font-size:12px;color:var(--slate);margin-top:8px">📅 Tomorrow · 10:00 AM</div></div>
-      <div class="ac"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><div style="font-size:14px;font-weight:600;color:var(--navy)">Dr. Aisha Patel</div><div style="font-size:12px;color:var(--muted);margin-top:2px">General Physician</div></div><span class="as2 sc">Completed</span></div><div style="font-size:12px;color:var(--slate);margin-top:8px">📅 March 20, 2026 · 2:30 PM</div></div>
+      <div class="ac"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><div style="font-size:14px;font-weight:600;color:var(--navy)">Dr. James Smith</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Cardiologist</div></div><span class="as2 ss2">Scheduled</span></div><div style="font-size:12px;color:var(--slate);margin-top:8px">📅 Tomorrow · 10:00 AM</div></div>
+      <div class="ac"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><div style="font-size:14px;font-weight:600;color:var(--navy)">Dr. Aisha Patel</div><div style="font-size:12px;color:var(--muted);margin-top:2px">General Physician</div></div><span class="as2 sc2">Completed</span></div><div style="font-size:12px;color:var(--slate);margin-top:8px">📅 March 20, 2026 · 2:30 PM</div></div>
     </div>
+
+    <!-- PRESCRIPTIONS TAB -->
     <div class="tc" id="tab-rx">
       <div class="sl">MY PRESCRIPTIONS</div>
       <div class="rxc"><div class="rxi">💊</div><div><div style="font-size:14px;font-weight:600;color:var(--navy)">Metformin 500mg</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Twice daily with meals · 30 days</div><span class="rxb rxa">Active</span></div></div>
@@ -244,7 +315,48 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-
   </div>
 </div>
 
-<!-- ADMIN -->
+<!-- CHAT SCREEN -->
+<div class="chat-scr" id="chat-screen">
+  <div class="chat-hdr">
+    <button class="chat-back" onclick="closeChat()">‹</button>
+    <div class="chat-av" id="chat-av" style="background:rgba(14,165,233,0.2);color:var(--sky)">JS</div>
+    <div class="chat-info"><div class="chat-name" id="chat-name">Dr. James Smith</div><div class="chat-status">🟢 Online · Available</div></div>
+    <div class="chat-hdr-btns">
+      <button class="chb" onclick="startCallFromChat()" title="Video Call">📹</button>
+      <button class="chb" title="Voice Call">📞</button>
+    </div>
+  </div>
+  <div class="chat-msgs" id="chat-msgs">
+    <div class="msg theirs"><div class="mb">Hello! How are you feeling today? 😊</div><div class="mt2">10:28 AM</div></div>
+    <div class="msg mine"><div class="mb">I've been having some chest pain since yesterday.</div><div class="mt2">10:30 AM</div></div>
+    <div class="msg theirs"><div class="mb">I understand. Is it a sharp pain or more of a dull ache? Does it radiate to your arm or jaw?</div><div class="mt2">10:31 AM</div></div>
+    <div class="msg mine"><div class="mb">It's more of a dull ache, stays in the chest area.</div><div class="mt2">10:32 AM</div></div>
+    <div class="msg theirs"><div class="mb">Okay. I'd recommend we do a video call so I can assess you better. Are you available now?</div><div class="mt2">10:33 AM</div></div>
+  </div>
+  <div class="chat-inp-area">
+    <input class="chat-inp" id="chat-input" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendMsg()">
+    <button class="chat-send" onclick="sendMsg()">➤</button>
+  </div>
+</div>
+
+<!-- VIDEO CALL SCREEN -->
+<div class="vc-scr" id="vc-screen">
+  <div class="vc-remote">
+    <div class="vc-remote-av ringing" id="vc-av" style="background:rgba(14,165,233,0.2);color:var(--sky)">JS</div>
+    <div class="vc-calling" id="vc-calling">Calling...</div>
+    <div class="vc-timer" id="vc-timer">00:00</div>
+    <div class="vc-name" id="vc-name">Dr. James Smith</div>
+    <div class="vc-local">🤳</div>
+  </div>
+  <div class="vc-ctrls">
+    <button class="vc-btn dark" id="btn-mute" onclick="toggleMute()">🎙️</button>
+    <button class="vc-btn end" onclick="endCall()">📵</button>
+    <button class="vc-btn dark" id="btn-cam" onclick="toggleCam()">📷</button>
+    <button class="vc-btn dark" onclick="flipCam()">🔄</button>
+  </div>
+</div>
+
+<!-- ADMIN SCREEN -->
 <div class="screen" id="s-admin">
   <div class="admin-hdr">
     <div class="admin-logo">MED<span>TELI</span> <span style="font-size:10px;color:rgba(255,255,255,0.35);font-weight:400;letter-spacing:2px">ADMIN</span></div>
@@ -266,37 +378,21 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-
         <div class="stc"><div class="sti">💊</div><div class="stn" id="sr">3</div><div class="stl">Prescriptions</div></div>
       </div>
       <div class="ast">Recent Activity</div>
-      <div class="acard"><div class="acr"><div><div class="an">New appointment booked</div><div class="asu">Dr. James Smith · John Doe</div></div><span style="font-size:12px;color:var(--muted)">Now</span></div></div>
-      <div class="acard"><div class="acr"><div><div class="an">Prescription issued</div><div class="asu">Metformin 500mg · Sarah Ali</div></div><span style="font-size:12px;color:var(--muted)">2h ago</span></div></div>
-      <div class="acard"><div class="acr"><div><div class="an">New patient registered</div><div class="asu">Ahmed Rahman joined</div></div><span style="font-size:12px;color:var(--muted)">5h ago</span></div></div>
+      <div class="acard"><div class="acr"><div><div class="an3">New appointment booked</div><div class="asu">Dr. James Smith · John Doe</div></div><span style="font-size:12px;color:var(--muted)">Now</span></div></div>
+      <div class="acard"><div class="acr"><div><div class="an3">Prescription issued</div><div class="asu">Metformin 500mg · Sarah Ali</div></div><span style="font-size:12px;color:var(--muted)">2h ago</span></div></div>
+      <div class="acard"><div class="acr"><div><div class="an3">New patient registered</div><div class="asu">Ahmed Rahman joined</div></div><span style="font-size:12px;color:var(--muted)">5h ago</span></div></div>
     </div>
-    <div class="atab" id="at-doctors">
-      <button class="badd" onclick="om('doctor')">+ Add Doctor</button>
-      <div class="ast">All Doctors</div>
-      <div id="dl"></div>
-    </div>
-    <div class="atab" id="at-patients">
-      <button class="badd" onclick="om('patient')">+ Add Patient</button>
-      <div class="ast">All Patients</div>
-      <div id="pl"></div>
-    </div>
-    <div class="atab" id="at-appts">
-      <button class="badd" onclick="om('appt')">+ Add Appointment</button>
-      <div class="ast">All Appointments</div>
-      <div id="al"></div>
-    </div>
-    <div class="atab" id="at-rx">
-      <button class="badd" onclick="om('rx')">+ Add Prescription</button>
-      <div class="ast">All Prescriptions</div>
-      <div id="rl"></div>
-    </div>
+    <div class="atab" id="at-doctors"><button class="badd" onclick="om('doctor')">+ Add Doctor</button><div class="ast">All Doctors</div><div id="dl"></div></div>
+    <div class="atab" id="at-patients"><button class="badd" onclick="om('patient')">+ Add Patient</button><div class="ast">All Patients</div><div id="pl"></div></div>
+    <div class="atab" id="at-appts"><button class="badd" onclick="om('appt')">+ Add Appointment</button><div class="ast">All Appointments</div><div id="al"></div></div>
+    <div class="atab" id="at-rx"><button class="badd" onclick="om('rx')">+ Add Prescription</button><div class="ast">All Prescriptions</div><div id="rl"></div></div>
   </div>
 </div>
 
 <!-- MODAL -->
 <div class="mover" id="modal" style="display:none" onclick="if(event.target===this)cm()">
   <div class="modal">
-    <div class="mt" id="mtitle">Add</div>
+    <div class="mtx" id="mtitle">Add</div>
     <div id="mbody"></div>
     <div class="mbs"><button class="mcanc" onclick="cm()">Cancel</button><button class="msave" onclick="sv()">Save</button></div>
   </div>
@@ -305,7 +401,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-
 <script>
 const PCREDS=[{u:'patient',p:'patient123',n:'John Doe 👋'},{u:'sarah',p:'sarah123',n:'Sarah Ali 👋'},{u:'ahmed',p:'ahmed123',n:'Ahmed Rahman 👋'}];
 const ACRED={u:'admin',p:'admin123'};
-
 let D={
   doctors:[{id:1,name:'Dr. James Smith',spec:'Cardiologist',avail:true,rating:'4.9',wait:5},{id:2,name:'Dr. Aisha Patel',spec:'General Physician',avail:true,rating:'4.8',wait:12},{id:3,name:'Dr. Ravi Kumar',spec:'Dermatologist',avail:true,rating:'4.7',wait:8},{id:4,name:'Dr. Maria Lopez',spec:'Pediatrician',avail:false,rating:'4.9',wait:20}],
   patients:[{id:1,name:'John Doe',age:35,phone:'9876543210'},{id:2,name:'Sarah Ali',age:28,phone:'9123456789'},{id:3,name:'Ahmed Rahman',age:42,phone:'9988776655'}],
@@ -313,6 +408,8 @@ let D={
   rx:[{id:1,patient:'Sarah Ali',med:'Metformin 500mg',dose:'Twice daily',days:30,status:'Active'},{id:2,patient:'John Doe',med:'Atorvastatin 10mg',dose:'Once daily',days:90,status:'Active'},{id:3,patient:'Ahmed Rahman',med:'Amoxicillin 250mg',dose:'Three times daily',days:7,status:'Completed'}]
 };
 let mtype='',eid=null,no=false,uc=3,vfo=false;
+let callTimer=null,callSecs=0,callConnected=false;
+let currentDoc={name:'',initials:'',color:'sky'};
 
 function ss(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active')}
 function doLogin(){const u=document.getElementById('lu').value.trim(),p=document.getElementById('lp').value,f=PCREDS.find(c=>c.u===u&&c.p===p);if(f){document.getElementById('pname').textContent=f.n;ss('s-patient')}else document.getElementById('lerr').style.display='block'}
@@ -323,21 +420,84 @@ function toggleNotifs(){no=!no;document.getElementById('npw').style.display=no?'
 function markRead(r){const d=r.querySelector('.ud');if(d){d.remove();r.style.opacity='0.5';uc=Math.max(0,uc-1);const b=document.getElementById('badge');b.style.display=uc===0?'none':'flex';if(uc>0)b.textContent=uc}}
 function toggleVF(){vfo=!vfo;document.getElementById('vfm').style.display=vfo?'block':'none';document.getElementById('logbtn').textContent=vfo?'Cancel':'+ Log'}
 function saveVitals(){const bp=document.getElementById('ibp').value,hr=document.getElementById('ihr').value,sp=document.getElementById('ispo').value;if(!bp||!hr){alert('Enter at least BP and HR');return}document.getElementById('vbp').textContent=bp;document.getElementById('vhr').textContent=hr+' bpm';document.getElementById('vspo').textContent=sp?sp+'%':'98%';document.getElementById('vfm').style.display='none';document.getElementById('logbtn').textContent='+ Log';vfo=false;['ibp','ihr','ispo','itmp'].forEach(id=>document.getElementById(id).value='');alert('✅ Vitals saved!')}
-function switchTab(n,b){document.querySelectorAll('.tc').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active');b.classList.add('active');if(no)toggleNotifs()}
+function switchTab(n,b){document.querySelectorAll('.tc').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active');b.classList.add('active');if(no)toggleNotifs()}
 
+// ── CHAT ──
+function openChat(name,initials,color){
+  currentDoc={name,initials,color};
+  document.getElementById('chat-name').textContent=name;
+  document.getElementById('chat-av').textContent=initials;
+  document.getElementById('chat-av').style.color='var(--'+color+')';
+  document.getElementById('chat-av').style.background='rgba(var(--'+color+'-rgb,14,165,233),0.15)';
+  document.getElementById('chat-screen').classList.add('open');
+}
+function closeChat(){document.getElementById('chat-screen').classList.remove('open')}
+function sendMsg(){
+  const inp=document.getElementById('chat-input');
+  const txt=inp.value.trim();
+  if(!txt)return;
+  const msgs=document.getElementById('chat-msgs');
+  const now=new Date();
+  const time=now.getHours()+':'+String(now.getMinutes()).padStart(2,'0');
+  msgs.innerHTML+=`<div class="msg mine"><div class="mb">${txt}</div><div class="mt2">${time}</div></div>`;
+  inp.value='';
+  msgs.scrollTop=msgs.scrollHeight;
+  setTimeout(()=>{
+    const replies=['I understand. I will review your case.','Please monitor your symptoms and let me know if they worsen.','That sounds concerning. Let\'s schedule a follow-up.','Good to hear! Keep taking your medication as prescribed.','I\'ll update your prescription accordingly.'];
+    const reply=replies[Math.floor(Math.random()*replies.length)];
+    msgs.innerHTML+=`<div class="msg theirs"><div class="mb">${reply}</div><div class="mt2">${time}</div></div>`;
+    msgs.scrollTop=msgs.scrollHeight;
+  },1200);
+}
+
+// ── VIDEO CALL ──
+function startCall(name,initials,color){
+  currentDoc={name,initials,color};
+  document.getElementById('vc-name').textContent=name;
+  document.getElementById('vc-av').textContent=initials;
+  document.getElementById('vc-av').style.color='var(--'+color+')';
+  document.getElementById('vc-calling').textContent='Calling...';
+  document.getElementById('vc-timer').style.display='none';
+  document.getElementById('vc-av').classList.add('ringing');
+  callConnected=false;callSecs=0;
+  document.getElementById('vc-screen').classList.add('open');
+  setTimeout(()=>{
+    callConnected=true;
+    document.getElementById('vc-calling').textContent='Connected';
+    document.getElementById('vc-av').classList.remove('ringing');
+    document.getElementById('vc-timer').style.display='block';
+    callTimer=setInterval(()=>{
+      callSecs++;
+      const m=String(Math.floor(callSecs/60)).padStart(2,'0');
+      const s=String(callSecs%60).padStart(2,'0');
+      document.getElementById('vc-timer').textContent=m+':'+s;
+    },1000);
+  },3000);
+}
+function startCallFromChat(){closeChat();startCall(currentDoc.name,currentDoc.initials,currentDoc.color)}
+function endCall(){
+  clearInterval(callTimer);callTimer=null;callSecs=0;callConnected=false;
+  document.getElementById('vc-screen').classList.remove('open');
+  document.getElementById('btn-mute').textContent='🎙️';
+  document.getElementById('btn-cam').textContent='📷';
+}
+function toggleMute(){const b=document.getElementById('btn-mute');b.textContent=b.textContent==='🎙️'?'🔇':'🎙️'}
+function toggleCam(){const b=document.getElementById('btn-cam');b.textContent=b.textContent==='📷'?'📵':'📷'}
+function flipCam(){document.getElementById('vc-local').style.background=document.getElementById('vc-local').style.background==="#2a3a2e"?"#2a2a3e":"#2a3a2e"}
+
+// ── ADMIN ──
 function ra(){
   document.getElementById('sd').textContent=D.doctors.length;
   document.getElementById('sp').textContent=D.patients.length;
   document.getElementById('sa').textContent=D.appts.length;
   document.getElementById('sr').textContent=D.rx.length;
-  document.getElementById('dl').innerHTML=D.doctors.map(d=>`<div class="acard"><div class="acr"><div><div class="an">${d.name}</div><div class="asu">${d.spec} · <span class="adot ${d.avail?'ay':'an2'}"></span>${d.avail?'Available':'Unavailable'} · ★${d.rating}</div></div><div class="aacts"><button class="be" onclick="oe('doctor',${d.id})">Edit</button><button class="bd" onclick="di('doctors',${d.id})">Delete</button></div></div></div>`).join('');
-  document.getElementById('pl').innerHTML=D.patients.map(p=>`<div class="acard"><div class="acr"><div><div class="an">${p.name}</div><div class="asu">Age: ${p.age} · 📞 ${p.phone}</div></div><div class="aacts"><button class="be" onclick="oe('patient',${p.id})">Edit</button><button class="bd" onclick="di('patients',${p.id})">Delete</button></div></div></div>`).join('');
-  document.getElementById('al').innerHTML=D.appts.map(a=>`<div class="acard"><div><div class="an">${a.patient}</div><div class="asu">${a.doctor} · 📅 ${a.date}</div><div style="margin-top:6px"><span class="as2 ${a.status==='Scheduled'?'ss':'sc'}">${a.status}</span></div></div><div style="margin-top:8px;text-align:right"><button class="bd" onclick="di('appts',${a.id})">Delete</button></div></div>`).join('');
-  document.getElementById('rl').innerHTML=D.rx.map(r=>`<div class="acard"><div class="acr"><div><div class="an">${r.med}</div><div class="asu">${r.patient} · ${r.dose} · ${r.days} days</div><div style="margin-top:6px"><span class="rxb ${r.status==='Active'?'rxa':''}" style="${r.status!=='Active'?'background:rgba(148,163,184,0.15);color:var(--muted)':''}">${r.status}</span></div></div><button class="bd" onclick="di('rx',${r.id})">Delete</button></div></div>`).join('');
+  document.getElementById('dl').innerHTML=D.doctors.map(d=>`<div class="acard"><div class="acr"><div><div class="an3">${d.name}</div><div class="asu">${d.spec} · <span class="adot ${d.avail?'ay':'an2x'}"></span>${d.avail?'Available':'Unavailable'} · ★${d.rating}</div></div><div class="aacts"><button class="be" onclick="oe('doctor',${d.id})">Edit</button><button class="bd" onclick="di('doctors',${d.id})">Delete</button></div></div></div>`).join('');
+  document.getElementById('pl').innerHTML=D.patients.map(p=>`<div class="acard"><div class="acr"><div><div class="an3">${p.name}</div><div class="asu">Age: ${p.age} · 📞 ${p.phone}</div></div><div class="aacts"><button class="be" onclick="oe('patient',${p.id})">Edit</button><button class="bd" onclick="di('patients',${p.id})">Delete</button></div></div></div>`).join('');
+  document.getElementById('al').innerHTML=D.appts.map(a=>`<div class="acard"><div><div class="an3">${a.patient}</div><div class="asu">${a.doctor} · 📅 ${a.date}</div><div style="margin-top:6px"><span class="as2 ${a.status==='Scheduled'?'ss2':'sc2'}">${a.status}</span></div></div><div style="margin-top:8px;text-align:right"><button class="bd" onclick="di('appts',${a.id})">Delete</button></div></div>`).join('');
+  document.getElementById('rl').innerHTML=D.rx.map(r=>`<div class="acard"><div class="acr"><div><div class="an3">${r.med}</div><div class="asu">${r.patient} · ${r.dose} · ${r.days} days</div><div style="margin-top:6px"><span class="rxb ${r.status==='Active'?'rxa':''}" style="${r.status!=='Active'?'background:rgba(148,163,184,0.15);color:var(--muted)':''}">${r.status}</span></div></div><button class="bd" onclick="di('rx',${r.id})">Delete</button></div></div>`).join('');
 }
 function sat(n,b){document.querySelectorAll('.atab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.anb').forEach(b=>b.classList.remove('active'));document.getElementById('at-'+n).classList.add('active');b.classList.add('active')}
-function di(k,id){if(!confirm('Delete this record?'))return;D[k]=D[k].filter(x=>x.id!==id);ra()}
-
+function di(k,id){if(!confirm('Delete?'))return;D[k]=D[k].filter(x=>x.id!==id);ra()}
 const mf={
   doctor:`<input class="mi" id="mn" placeholder="Doctor name"><input class="mi" id="ms" placeholder="Specialization"><input class="mi" id="mr" placeholder="Rating (e.g. 4.8)"><select class="mi" id="mav"><option value="true">Available</option><option value="false">Unavailable</option></select>`,
   patient:`<input class="mi" id="mn" placeholder="Patient name"><input class="mi" id="ma" placeholder="Age" type="number"><input class="mi" id="mph" placeholder="Phone number">`,
