@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>MEDTELI</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --navy:#0f172a;--sky:#0ea5e9;--violet:#8b5cf6;--emerald:#10b981;
+  --amber:#f59e0b;--red:#ef4444;--slate:#475569;--muted:#94a3b8;
+  --bg:#f0f4f8;--surface:#fff;--border:#e2e8f0;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;max-width:430px;margin:0 auto;position:relative}
+
+/* Header */
+.header{background:var(--navy);padding:20px 20px 0;position:sticky;top:0;z-index:100}
+.header-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
+.greeting{font-size:11px;color:rgba(255,255,255,0.5);font-weight:600;letter-spacing:1px;margin-bottom:4px}
+.username{font-size:24px;color:#fff;font-weight:600}
+.bell-btn{width:44px;height:44px;border-radius:22px;background:rgba(255,255,255,0.1);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;position:relative;flex-shrink:0}
+.badge{position:absolute;top:-2px;right:-2px;width:18px;height:18px;border-radius:9px;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff}
+
+/* Health card */
+.health-card{margin:0 16px 16px;background:rgba(255,255,255,0.08);border-radius:16px;padding:16px;border:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;align-items:flex-start}
+.health-label{font-size:11px;color:rgba(255,255,255,0.5);font-weight:600;letter-spacing:1px;margin-bottom:4px}
+.health-score{font-size:42px;color:#fff;font-weight:700;line-height:1}
+.health-max{font-size:13px;color:rgba(255,255,255,0.5)}
+.health-trend{font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px}
+.vitals-header{font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;margin-bottom:6px;text-align:right}
+.vital-row{display:flex;gap:10px;justify-content:flex-end;margin-bottom:3px}
+.vital-key{font-size:12px;color:rgba(255,255,255,0.45)}
+.vital-val{font-size:12px;color:#fff;font-weight:600}
+
+/* Nav tabs */
+.nav-tabs{display:flex;gap:0;border-bottom:1px solid rgba(255,255,255,0.1)}
+.nav-tab{flex:1;padding:12px 8px;background:none;border:none;color:rgba(255,255,255,0.45);font-size:12px;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;font-family:'DM Sans',sans-serif;letter-spacing:0.3px;transition:all .2s}
+.nav-tab.active{color:#fff;border-bottom-color:var(--sky)}
+
+/* Body */
+.body{padding:16px}
+.section-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:1px;margin-bottom:12px}
+.section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;margin-top:8px}
+.see-all{font-size:13px;color:var(--sky);font-weight:600;background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif}
+
+/* Notification panel */
+.notif-panel{background:var(--surface);margin:0 16px 0;border-radius:16px;padding:16px;box-shadow:0 8px 32px rgba(0,0,0,0.12);animation:slideDown .22s ease}
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.notif-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.notif-title{font-size:14px;font-weight:700;color:var(--navy)}
+.notif-close{background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;line-height:1}
+.notif-row{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;align-items:flex-start;cursor:pointer}
+.notif-row:last-child{border-bottom:none}
+.notif-icon{font-size:20px;flex-shrink:0}
+.notif-item-title{font-size:13px;font-weight:600;color:var(--navy)}
+.notif-item-body{font-size:12px;color:var(--muted);margin-top:2px}
+.unread-dot{width:8px;height:8px;border-radius:4px;background:var(--sky);margin-top:6px;flex-shrink:0}
+
+/* Quick actions */
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.quick-card{background:var(--surface);border-radius:16px;padding:16px;cursor:pointer;border:none;text-align:left;font-family:'DM Sans',sans-serif;transition:transform .15s,box-shadow .15s;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.quick-card:active{transform:scale(0.97)}
+.quick-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;font-size:20px}
+.quick-label{font-size:14px;font-weight:600;color:#1e293b;margin-bottom:2px}
+.quick-sub{font-size:12px;color:var(--muted)}
+
+/* Card */
+.card{background:var(--surface);border-radius:16px;padding:14px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.card-row{display:flex;justify-content:space-between;align-items:center}
+.card-title{font-size:14px;font-weight:600;color:var(--navy)}
+.card-sub{font-size:12px;color:var(--muted);margin-top:2px}
+.log-btn{background:rgba(14,165,233,0.1);border:none;border-radius:10px;padding:6px 12px;font-size:12px;font-weight:700;color:var(--sky);cursor:pointer;font-family:'DM Sans',sans-serif}
+
+/* Vital form */
+.vital-form{margin-top:14px;animation:slideDown .22s ease}
+.vital-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.field-label{font-size:11px;color:var(--muted);margin-bottom:4px;font-weight:600;display:block}
+.vital-input{background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:9px;font-size:13px;color:var(--navy);width:100%;font-family:'DM Sans',sans-serif;outline:none}
+.vital-input:focus{border-color:var(--sky)}
+.save-vital-btn{background:var(--navy);border:none;border-radius:12px;padding:12px;width:100%;color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif}
+
+/* Doctor cards */
+.doc-card{background:var(--surface);border-radius:16px;padding:14px;display:flex;align-items:center;gap:14px;margin-bottom:10px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.06);transition:transform .15s}
+.doc-card:active{transform:scale(0.98)}
+.doc-avatar{width:46px;height:46px;border-radius:23px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0}
+.doc-name{font-size:14px;font-weight:600;color:#1e293b}
+.doc-spec{font-size:12px;color:#64748b;margin-top:2px}
+.wait-badge{display:inline-flex;align-items:center;gap:4px;background:rgba(16,185,129,0.1);padding:3px 8px;border-radius:20px;margin-bottom:4px}
+.pulse-dot{width:6px;height:6px;border-radius:3px;background:var(--emerald);animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.wait-text{font-size:11px;color:var(--emerald);font-weight:600}
+.doc-rating{font-size:12px;color:var(--muted)}
+.doc-info{flex:1}
+.doc-meta{text-align:right}
+
+/* Appointments tab */
+.appt-card{background:var(--surface);border-radius:16px;padding:14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.appt-top{display:flex;justify-content:space-between;align-items:flex-start}
+.appt-name{font-size:14px;font-weight:600;color:var(--navy)}
+.appt-spec{font-size:12px;color:var(--muted);margin-top:2px}
+.appt-status{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600}
+.status-scheduled{background:rgba(14,165,233,0.1);color:var(--sky)}
+.status-completed{background:rgba(16,185,129,0.1);color:var(--emerald)}
+.appt-time{font-size:12px;color:var(--slate);margin-top:8px}
+
+/* Prescriptions tab */
+.rx-card{background:var(--surface);border-radius:16px;padding:14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06);display:flex;gap:12px;align-items:flex-start}
+.rx-icon{width:40px;height:40px;border-radius:12px;background:rgba(139,92,246,0.1);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.rx-name{font-size:14px;font-weight:600;color:var(--navy)}
+.rx-dose{font-size:12px;color:var(--muted);margin-top:2px}
+.rx-badge{display:inline-block;margin-top:6px;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600}
+.rx-active{background:rgba(16,185,129,0.1);color:var(--emerald)}
+
+/* Tab content */
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* Empty state */
+.empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
+.empty-icon{font-size:40px;margin-bottom:12px}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div>
+      <div class="greeting">GOOD MORNING</div>
+      <div class="username">Patient 👋</div>
+    </div>
+    <button class="bell-btn" onclick="toggleNotifs()">
+      🔔
+      <div class="badge" id="badge">3</div>
+    </button>
+  </div>
+
+  <div class="health-card">
+    <div>
+      <div class="health-label">HEALTH SCORE</div>
+      <div style="display:flex;align-items:flex-end;gap:6px;margin-bottom:4px">
+        <span class="health-score">87</span>
+        <span class="health-max">/100</span>
+      </div>
+      <div class="health-trend">+3 from last month</div>
+    </div>
+    <div>
+      <div class="vitals-header">LATEST VITALS</div>
+      <div class="vital-row"><span class="vital-key">BP</span><span class="vital-val">120/80</span></div>
+      <div class="vital-row"><span class="vital-key">HR</span><span class="vital-val">72 bpm</span></div>
+      <div class="vital-row"><span class="vital-key">SpO₂</span><span class="vital-val">98%</span></div>
+    </div>
+  </div>
+
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="switchTab('home',this)">HOME</button>
+    <button class="nav-tab" onclick="switchTab('doctors',this)">DOCTORS</button>
+    <button class="nav-tab" onclick="switchTab('appointments',this)">APPTS</button>
+    <button class="nav-tab" onclick="switchTab('prescriptions',this)">Rx</button>
+  </div>
+</div>
+
+<!-- Notification Panel -->
+<div id="notif-panel" style="display:none">
+  <div class="notif-panel">
+    <div class="notif-header">
+      <span class="notif-title">Notifications</span>
+      <button class="notif-close" onclick="toggleNotifs()">×</button>
+    </div>
+    <div class="notif-row" onclick="markRead(this)">
+      <span class="notif-icon">📅</span>
+      <div style="flex:1"><div class="notif-item-title">Appointment Reminder</div><div class="notif-item-body">Dr. Smith tomorrow at 10:00 AM</div></div>
+      <div class="unread-dot"></div>
+    </div>
+    <div class="notif-row" onclick="markRead(this)">
+      <span class="notif-icon">💊</span>
+      <div style="flex:1"><div class="notif-item-title">Medication Reminder</div><div class="notif-item-body">Take Metformin 500mg with dinner</div></div>
+      <div class="unread-dot"></div>
+    </div>
+    <div class="notif-row" onclick="markRead(this)">
+      <span class="notif-icon">🔔</span>
+      <div style="flex:1"><div class="notif-item-title">Lab Results Ready</div><div class="notif-item-body">Your blood test results are available</div></div>
+      <div class="unread-dot"></div>
+    </div>
+  </div>
+</div>
+
+<div class="body">
+
+  <!-- HOME TAB -->
+  <div class="tab-content active" id="tab-home">
+    <div class="section-label">QUICK ACTIONS</div>
+    <div class="quick-grid">
+      <button class="quick-card" onclick="switchTab('doctors',document.querySelectorAll('.nav-tab')[1])">
+        <div class="quick-icon" style="background:rgba(14,165,233,0.1)">🩺</div>
+        <div class="quick-label">See a Doctor</div>
+        <div class="quick-sub">Doctors online now</div>
+      </button>
+      <button class="quick-card">
+        <div class="quick-icon" style="background:rgba(139,92,246,0.1)">📋</div>
+        <div class="quick-label">My Records</div>
+        <div class="quick-sub">View health data</div>
+      </button>
+      <button class="quick-card" onclick="switchTab('prescriptions',document.querySelectorAll('.nav-tab')[3])">
+        <div class="quick-icon" style="background:rgba(16,185,129,0.1)">💊</div>
+        <div class="quick-label">Prescriptions</div>
+        <div class="quick-sub">2 active</div>
+      </button>
+      <button class="quick-card" onclick="switchTab('appointments',document.querySelectorAll('.nav-tab')[2])">
+        <div class="quick-icon" style="background:rgba(245,158,11,0.1)">📅</div>
+        <div class="quick-label">Appointments</div>
+        <div class="quick-sub">1 upcoming</div>
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="card-row">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:20px">📊</span>
+          <div>
+            <div class="card-title">Log Today's Vitals</div>
+            <div class="card-sub">Keep your health data current</div>
+          </div>
+        </div>
+        <button class="log-btn" onclick="toggleVitalForm()">+ Log</button>
+      </div>
+      <div id="vital-form" style="display:none" class="vital-form">
+        <div class="vital-grid">
+          <div><label class="field-label">Blood Pressure</label><input class="vital-input" placeholder="120/80" id="bp"></div>
+          <div><label class="field-label">Heart Rate</label><input class="vital-input" placeholder="bpm" id="hr"></div>
+          <div><label class="field-label">SpO₂</label><input class="vital-input" placeholder="%" id="spo2"></div>
+          <div><label class="field-label">Temperature</label><input class="vital-input" placeholder="°F" id="temp"></div>
+        </div>
+        <button class="save-vital-btn" onclick="saveVitals()">Save Vitals →</button>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-label" style="margin:0">AVAILABLE NOW</span>
+      <button class="see-all" onclick="switchTab('doctors',document.querySelectorAll('.nav-tab')[1])">See all →</button>
+    </div>
+
+    <div class="doc-card">
+      <div class="doc-avatar" style="background:rgba(14,165,233,0.15);color:var(--sky)">JS</div>
+      <div class="doc-info">
+        <div class="doc-name">Dr. James Smith</div>
+        <div class="doc-spec">Cardiologist</div>
+      </div>
+      <div class="doc-meta">
+        <div class="wait-badge"><div class="pulse-dot"></div><span class="wait-text">~5m</span></div>
+        <div class="doc-rating">★ 4.9</div>
+      </div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-avatar" style="background:rgba(139,92,246,0.15);color:var(--violet)">AP</div>
+      <div class="doc-info">
+        <div class="doc-name">Dr. Aisha Patel</div>
+        <div class="doc-spec">General Physician</div>
+      </div>
+      <div class="doc-meta">
+        <div class="wait-badge"><div class="pulse-dot"></div><span class="wait-text">~12m</span></div>
+        <div class="doc-rating">★ 4.8</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOCTORS TAB -->
+  <div class="tab-content" id="tab-doctors">
+    <div class="section-label">ALL DOCTORS</div>
+    <div class="doc-card">
+      <div class="doc-avatar" style="background:rgba(14,165,233,0.15);color:var(--sky)">JS</div>
+      <div class="doc-info"><div class="doc-name">Dr. James Smith</div><div class="doc-spec">Cardiologist</div></div>
+      <div class="doc-meta"><div class="wait-badge"><div class="pulse-dot"></div><span class="wait-text">~5m</span></div><div class="doc-rating">★ 4.9</div></div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-avatar" style="background:rgba(139,92,246,0.15);color:var(--violet)">AP</div>
+      <div class="doc-info"><div class="doc-name">Dr. Aisha Patel</div><div class="doc-spec">General Physician</div></div>
+      <div class="doc-meta"><div class="wait-badge"><div class="pulse-dot"></div><span class="wait-text">~12m</span></div><div class="doc-rating">★ 4.8</div></div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-avatar" style="background:rgba(16,185,129,0.15);color:var(--emerald)">RK</div>
+      <div class="doc-info"><div class="doc-name">Dr. Ravi Kumar</div><div class="doc-spec">Dermatologist</div></div>
+      <div class="doc-meta"><div class="wait-badge"><div class="pulse-dot"></div><span class="wait-text">~8m</span></div><div class="doc-rating">★ 4.7</div></div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-avatar" style="background:rgba(245,158,11,0.15);color:var(--amber)">ML</div>
+      <div class="doc-info"><div class="doc-name">Dr. Maria Lopez</div><div class="doc-spec">Pediatrician</div></div>
+      <div class="doc-meta"><div class="wait-badge"><div class="pulse-dot"></div><span class="wait-text">~20m</span></div><div class="doc-rating">★ 4.9</div></div>
+    </div>
+  </div>
+
+  <!-- APPOINTMENTS TAB -->
+  <div class="tab-content" id="tab-appointments">
+    <div class="section-label">MY APPOINTMENTS</div>
+    <div class="appt-card">
+      <div class="appt-top">
+        <div><div class="appt-name">Dr. James Smith</div><div class="appt-spec">Cardiologist</div></div>
+        <span class="appt-status status-scheduled">Scheduled</span>
+      </div>
+      <div class="appt-time">📅 Tomorrow · 10:00 AM</div>
+    </div>
+    <div class="appt-card">
+      <div class="appt-top">
+        <div><div class="appt-name">Dr. Aisha Patel</div><div class="appt-spec">General Physician</div></div>
+        <span class="appt-status status-completed">Completed</span>
+      </div>
+      <div class="appt-time">📅 March 20, 2026 · 2:30 PM</div>
+    </div>
+  </div>
+
+  <!-- PRESCRIPTIONS TAB -->
+  <div class="tab-content" id="tab-prescriptions">
+    <div class="section-label">MY PRESCRIPTIONS</div>
+    <div class="rx-card">
+      <div class="rx-icon">💊</div>
+      <div>
+        <div class="rx-name">Metformin 500mg</div>
+        <div class="rx-dose">Twice daily with meals · 30 days</div>
+        <span class="rx-badge rx-active">Active</span>
+      </div>
+    </div>
+    <div class="rx-card">
+      <div class="rx-icon">💊</div>
+      <div>
+        <div class="rx-name">Atorvastatin 10mg</div>
+        <div class="rx-dose">Once daily at bedtime · 90 days</div>
+        <span class="rx-badge rx-active">Active</span>
+      </div>
+    </div>
+    <div class="rx-card" style="opacity:0.6">
+      <div class="rx-icon">💊</div>
+      <div>
+        <div class="rx-name">Amoxicillin 250mg</div>
+        <div class="rx-dose">Three times daily · 7 days</div>
+        <span class="rx-badge" style="background:rgba(148,163,184,0.15);color:var(--muted)">Completed</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let notifsOpen = false;
+let vitalFormOpen = false;
+let unreadCount = 3;
+
+function toggleNotifs() {
+  notifsOpen = !notifsOpen;
+  document.getElementById('notif-panel').style.display = notifsOpen ? 'block' : 'none';
+}
+
+function markRead(row) {
+  const dot = row.querySelector('.unread-dot');
+  if (dot) {
+    dot.remove();
+    row.style.opacity = '0.5';
+    unreadCount = Math.max(0, unreadCount - 1);
+    const badge = document.getElementById('badge');
+    if (unreadCount === 0) badge.style.display = 'none';
+    else badge.textContent = unreadCount;
+  }
+}
+
+function toggleVitalForm() {
+  vitalFormOpen = !vitalFormOpen;
+  const form = document.getElementById('vital-form');
+  form.style.display = vitalFormOpen ? 'block' : 'none';
+  const btn = document.querySelector('.log-btn');
+  btn.textContent = vitalFormOpen ? 'Cancel' : '+ Log';
+}
+
+function saveVitals() {
+  const bp = document.getElementById('bp').value;
+  const hr = document.getElementById('hr').value;
+  const spo2 = document.getElementById('spo2').value;
+  if (!bp || !hr) { alert('Please enter at least BP and HR'); return; }
+  document.querySelector('.vital-val').textContent = bp || '—';
+  document.querySelectorAll('.vital-val')[1].textContent = hr ? hr + ' bpm' : '—';
+  document.querySelectorAll('.vital-val')[2].textContent = spo2 ? spo2 + '%' : '—';
+  toggleVitalForm();
+  document.getElementById('bp').value = '';
+  document.getElementById('hr').value = '';
+  document.getElementById('spo2').value = '';
+  document.getElementById('temp').value = '';
+  alert('✅ Vitals saved successfully!');
+}
+
+function switchTab(tabName, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + tabName).classList.add('active');
+  btn.classList.add('active');
+  if (notifsOpen) toggleNotifs();
+}
+</script>
+</body>
+</html>
